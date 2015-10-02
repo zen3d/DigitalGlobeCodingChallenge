@@ -1,4 +1,4 @@
-# DigitalGlobeCodingChallenge
+# Digital Globe Coding Challenge
 
 This project is my solution to the Digital Globe coding challenge.
 
