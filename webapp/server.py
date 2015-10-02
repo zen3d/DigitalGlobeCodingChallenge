@@ -126,12 +126,9 @@ class Root(object):
         if len(args) > 1:
             return (_invalid_key % ('/'.join(args)))
         elif args[0] in self.keys_dict:
-            print(self.keys_dict[args[0]])
             raise cherrypy.HTTPRedirect("http://%s" % (self.keys_dict[args[0]]))
         else:
             return (_unknown_key % args[0])
-        print(len(args))
-        return "in default"
     default.exposed = True
 
 root = Root()
