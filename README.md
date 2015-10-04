@@ -27,3 +27,10 @@ A utility function is also provided (hash_str) that takes a string containing th
 
 Dockerfile contains the settings and initialization for the docker container. It initializes the container to contain a resonable set of Python packages, including the essential cherrypy package.
 
+To build the Dockerfile, do:
+ docker build -t <my_docker_ID>/mywebapp:latest .
+
+To run the Dockerfile, do:
+ docker run -p 80:8080 -i -t <my_docker_ID>/mywebapp:latest
+ 
+Replace <my_dicker_ID> with your personal docker ID.
