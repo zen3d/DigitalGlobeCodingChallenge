@@ -20,8 +20,8 @@ _url_form = """
 <html>
     <body>
 	<form action="new_url" method="post">
-          URL:<br>
-          <input type="text" name="url" value="">
+          Enter URL to shorten:<br>
+          <input type="url" name="url" value="" size=64>
           <br>
           <input type="submit" value="Submit">
         </form>
@@ -126,7 +126,7 @@ class Root(object):
         if len(args) > 1:
             return (_invalid_key % ('/'.join(args)))
         elif args[0] in self.keys_dict:
-            raise cherrypy.HTTPRedirect("http://%s" % (self.keys_dict[args[0]]))
+            raise cherrypy.HTTPRedirect(self.keys_dict[args[0]])
         else:
             return (_unknown_key % args[0])
     default.exposed = True
